@@ -1,3 +1,5 @@
+ifneq ($(GAPPS_VARIANT),)
+
 # Opengapps AOSP build system
 GAPPS_BUILD_SYSTEM_PATH := vendor/google/build/core
 GAPPS_SOURCES_PATH := vendor/opengapps/sources
@@ -47,3 +49,5 @@ ifeq ($(GAPPS_VARIANT_EVAL),)
 endif
 
 TARGET_GAPPS_VARIANT := $(GAPPS_VARIANT_EVAL)
+
+endif
