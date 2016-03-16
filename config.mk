@@ -1,3 +1,5 @@
+ifneq ($(GAPPS_VARIANT),)
+
 # Opengapps AOSP build system
 GAPPS_BUILD_SYSTEM_PATH := vendor/google/build/core
 GAPPS_SOURCES_PATH := vendor/opengapps/sources
@@ -17,3 +19,5 @@ $(error GAPPS_VARIANT $(GAPPS_VARIANT) was not found. Use of one of pico,nano,mi
 endif
 
 TARGET_GAPPS_VARIANT := $(GAPPS_VARIANT_EVAL)
+
+endif
